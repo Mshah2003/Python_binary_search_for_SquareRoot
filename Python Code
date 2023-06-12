@@ -1,0 +1,19 @@
+x = int(input())
+l1 = [i for i in range(x)]
+h = x-1
+l = 0
+a = 1
+mid = l + (h-l)//2
+while l <= h:
+    if l1[mid]*l1[mid] == x:
+        print(l1[mid])
+        a = 0
+        break
+    elif l1[mid]*l1[mid] < x:
+        l = mid+1
+        mid = l + (h-l)//2
+    elif l1[mid]*l1[mid] > x:
+        h = h-1
+        mid = l + (h-l)//2
+if a == 1:
+    print("Not a perfect square")
