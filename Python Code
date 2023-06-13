@@ -13,7 +13,7 @@ while l <= h:
         l = mid+1
         mid = l + (h-l)//2
     elif l1[mid]*l1[mid] > x:
-        h = h-1
+        h = mid-1
         mid = l + (h-l)//2
 if a == 1:
     print("Not a perfect square")
